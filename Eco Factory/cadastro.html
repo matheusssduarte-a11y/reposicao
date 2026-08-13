@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EcoFactory - Criar conta</title>
+
+    <link
+        rel="stylesheet"
+        href="cadastro.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="register-container">
+
+        <!-- =====================================
+             LADO ESQUERDO - ILUSTRAÇÃO
+        ====================================== -->
+
+        <section class="illustration">
+
+            <div class="sky">
+
+                <!-- Sol -->
+                <div class="sun"></div>
+
+                <!-- Nuvens -->
+                <div class="cloud cloud-1"></div>
+                <div class="cloud cloud-2"></div>
+
+                <!-- Montanhas -->
+                <div class="mountains">
+
+                    <div class="mountain mountain-1"></div>
+
+                    <div class="mountain mountain-2"></div>
+
+                </div>
+
+                <!-- Fábrica -->
+                <div class="factory">
+
+                    <div class="factory-building">
+
+                        <div class="factory-roof"></div>
+
+                        <div class="factory-window"></div>
+
+                        <div class="factory-window"></div>
+
+                        <div class="factory-window"></div>
+
+                        <div class="factory-door"></div>
+
+                    </div>
+
+                    <!-- Chaminé -->
+                    <div class="chimney">
+
+                        <div class="smoke smoke-1"></div>
+
+                        <div class="smoke smoke-2"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- Árvore -->
+                <div class="tree tree-1">
+
+                    <div class="tree-top"></div>
+
+                    <div class="tree-trunk"></div>
+
+                </div>
+
+                <div class="tree tree-2">
+
+                    <div class="tree-top"></div>
+
+                    <div class="tree-trunk"></div>
+
+                </div>
+
+                <!-- Turbina eólica -->
+                <div class="wind-turbine">
+
+                    <div class="turbine-blades">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                    <div class="turbine-pole"></div>
+
+                </div>
+
+                <!-- Chão -->
+                <div class="ground"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             LADO DIREITO - CADASTRO
+        ====================================== -->
+
+        <section class="register-content">
+
+            <!-- Logo -->
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    ⚙
+                </div>
+
+                <div>
+
+                    <h1>EcoFactory</h1>
+
+                    <span>
+                        Indústria Inteligente
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Título -->
+
+            <div class="welcome">
+
+                <h2>
+                    Crie sua conta
+                </h2>
+
+                <p>
+                    Cadastre-se para acessar<br>
+                    o sistema EcoFactory
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 FORMULÁRIO
+            ================================== -->
+
+            <form id="cadastroForm">
+
+    <div class="input-group">
+
+        <label for="nome">
+            Nome completo
+        </label>
+
+        <input
+            type="text"
+            id="nome"
+            placeholder="Digite seu nome"
+        >
+
+    </div>
+
+
+    <div class="input-group">
+
+        <label for="email">
+            E-mail
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Digite seu e-mail"
+        >
+
+    </div>
+
+
+    <div class="input-group">
+
+        <label for="cargo">
+            Cargo
+        </label>
+
+        <select id="cargo">
+
+            <option value="">
+                Selecione seu cargo
+            </option>
+
+            <option value="Administrador">
+                Administrador
+            </option>
+
+            <option value="Gestor">
+                Gestor
+            </option>
+
+            <option value="Operador">
+                Operador
+            </option>
+
+            <option value="Analista">
+                Analista
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div class="input-group">
+
+        <label for="senha">
+            Senha
+        </label>
+
+        <input
+            type="password"
+            id="senha"
+            placeholder="Digite sua senha"
+        >
+
+    </div>
+
+
+    <div class="input-group">
+
+        <label for="confirmarSenha">
+            Confirmar senha
+        </label>
+
+        <input
+            type="password"
+            id="confirmarSenha"
+            placeholder="Confirme sua senha"
+        >
+
+    </div>
+
+
+    <button
+        type="submit"
+        class="btn-cadastro"
+    >
+        Criar conta
+    </button>
+
+</form>
+
+
+<script src="js/cadastro.js"></script>
+
+
+            <!-- Login -->
+
+            <div class="login-link">
+
+                <span>
+                    Já possui uma conta?
+                </span>
+
+                <a href="index.html">
+                    Entrar
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="cadastro.js"></script>
+
+</body>
+
+</html>
