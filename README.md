@@ -92,6 +92,9 @@ A empresa fictícia **EcoFactory** opera no setor industrial e ainda registra su
 ### **Ferramentas de Suporte & Versionamento**
 * **Versionamento:** Git & GitHub
 * **Prototipação:** Figma / Canva
+* 
+ **IMAGEM PROTÓTIPO**
+*<img width="1536" height="1024" alt="ChatGPT Image 13 de ago  de 2026, 14_43_41" src="https://github.com/user-attachments/assets/2a871fe9-571e-472c-83c4-ab26be446f2f" />
 
 ---
 
