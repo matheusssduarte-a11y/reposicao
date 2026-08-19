@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EcoFactory - Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <div class="sidebar-logo-icon">
+                    ⚙
+                </div>
+
+                <div>
+                    <h1>EcoFactory</h1>
+
+                    <span>
+                        Indústria Inteligente
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <nav class="sidebar-menu">
+
+                <a
+                    href="dashboard.html"
+                    class="menu-item active"
+                >
+                    <span class="menu-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+
+                <a
+                    href="maquinas.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icon">⚙</span>
+                    <span>Máquinas</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+                    <span class="menu-icon">▥</span>
+                    <span>Produção</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+                    <span class="menu-icon">♢</span>
+                    <span>Consumos</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+                    <span class="menu-icon">⚠</span>
+                    <span>Ocorrências</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+                    <span class="menu-icon">⌁</span>
+                    <span>Indicadores</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+                    <span class="menu-icon">▤</span>
+                    <span>Relatórios</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+                    <span class="menu-icon">♙</span>
+                    <span>Usuários</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+                    <span class="menu-icon">⚙</span>
+                    <span>Configurações</span>
+                </a>
+
+            </nav>
+
+
+            <!-- SAIR -->
+
+            <button
+                class="logout-button"
+                id="logoutButton"
+            >
+                <span>⇥</span>
+                Sair
+            </button>
+
+        </aside>
+
+
+
+        <!-- =====================================================
+             CONTEÚDO PRINCIPAL
+        ====================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 CABEÇALHO
+            ================================================== -->
+
+            <header class="top-header">
+
+                <div class="header-title">
+
+                    <h2 id="welcomeMessage">
+                        Olá! 👋
+                    </h2>
+
+                    <p>
+                        Bem-vindo ao sistema EcoFactory
+                    </p>
+
+                </div>
+
+
+                <div class="header-actions">
+
+                    <!-- DATA -->
+
+                    <div class="date-selector">
+
+                        <span>
+                            20/05/2024 - 26/05/2024
+                        </span>
+
+                        <span>
+                            ▣
+                        </span>
+
+                    </div>
+
+
+                    <!-- NOTIFICAÇÕES -->
+
+                    <button
+                        class="notification-button"
+                        id="notificationButton"
+                    >
+
+                        ♧
+
+                        <span class="notification-badge">
+                            0
+                        </span>
+
+                    </button>
+
+
+                    <!-- USUÁRIO -->
+
+                    <div class="user-profile">
+
+                        <div
+                            class="user-avatar"
+                            id="userAvatar"
+                        >
+                            U
+                        </div>
+
+                        <span id="userName">
+                            Usuário
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 CARDS PRINCIPAIS / KPIs
+            ================================================== -->
+
+            <section class="kpi-grid">
+
+
+                <!-- PRODUÇÃO -->
+
+                <div class="stat-card">
+
+                    <div>
+
+                        <p>
+                            Produção Total
+                        </p>
+
+                        <h3 id="totalProduction">
+                            0
+                        </h3>
+
+                        <span>
+                            unidades
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EFICIÊNCIA -->
+
+                <div class="stat-card">
+
+                    <div>
+
+                        <p>
+                            Eficiência
+                        </p>
+
+                        <h3 id="efficiency">
+                            0%
+                        </h3>
+
+                        <span>
+                            da meta
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ENERGIA -->
+
+                <div class="stat-card">
+
+                    <div>
+
+                        <p>
+                            Energia (kWh)
+                        </p>
+
+                        <h3 id="totalEnergy">
+                            0
+                        </h3>
+
+                        <span id="energyVariation">
+                            Sem dados
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ÁGUA -->
+
+                <div class="stat-card">
+
+                    <div>
+
+                        <p>
+                            Água (L)
+                        </p>
+
+                        <h3 id="totalWater">
+                            0
+                        </h3>
+
+                        <span id="waterVariation">
+                            Sem dados
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MÁQUINAS -->
+
+                <div class="stat-card">
+
+                    <div>
+
+                        <p>
+                            Máquinas Ativas
+                        </p>
+
+                        <h3 id="activeMachines">
+                            0
+                        </h3>
+
+                        <span>
+                            de
+                            <span id="totalMachines">
+                                0
+                            </span>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PRIMEIRA LINHA
+            ================================================== -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- =============================================
+                     PRODUÇÃO POR DIA
+                ============================================== -->
+
+                <div class="dashboard-card production-chart">
+
+                    <div class="card-header">
+
+                        <h3>
+                            Produção por dia
+                        </h3>
+
+                        <select id="productionUnit">
+
+                            <option value="unidades">
+                                Unidades
+                            </option>
+
+                            <option value="toneladas">
+                                Toneladas
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div
+                        class="chart"
+                        id="productionChart"
+                    >
+
+                        <div class="chart-y">
+
+                            <span>3k</span>
+                            <span>2k</span>
+                            <span>1k</span>
+                            <span>0</span>
+
+                        </div>
+
+
+                        <div class="line-chart">
+
+                            <svg
+                                id="productionSvg"
+                                viewBox="0 0 600 220"
+                                preserveAspectRatio="none"
+                            >
+
+                                <line
+                                    x1="0"
+                                    y1="40"
+                                    x2="600"
+                                    y2="40"
+                                    class="grid-line"
+                                />
+
+                                <line
+                                    x1="0"
+                                    y1="100"
+                                    x2="600"
+                                    y2="100"
+                                    class="grid-line"
+                                />
+
+                                <line
+                                    x1="0"
+                                    y1="160"
+                                    x2="600"
+                                    y2="160"
+                                    class="grid-line"
+                                />
+
+                            </svg>
+
+
+                            <div class="chart-days">
+
+                                <span>Seg</span>
+                                <span>Ter</span>
+                                <span>Qua</span>
+                                <span>Qui</span>
+                                <span>Sex</span>
+                                <span>Sáb</span>
+                                <span>Dom</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     STATUS DAS MÁQUINAS
+                ============================================== -->
+
+                <div class="dashboard-card status-card">
+
+                    <h3>
+                        Status das Máquinas
+                    </h3>
+
+
+                    <div class="machine-status-content">
+
+
+                        <div class="status-circle">
+
+                            <div class="status-circle-center">
+
+                                <strong id="machineStatusTotal">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="status-legend">
+
+
+                            <div class="status-row">
+
+                                <span class="status-dot active"></span>
+
+                                <span>
+                                    Ativas
+                                </span>
+
+                                <strong id="statusActive">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+
+                            <div class="status-row">
+
+                                <span class="status-dot stopped"></span>
+
+                                <span>
+                                    Paradas
+                                </span>
+
+                                <strong id="statusStopped">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+
+                            <div class="status-row">
+
+                                <span class="status-dot maintenance"></span>
+
+                                <span>
+                                    Manutenção
+                                </span>
+
+                                <strong id="statusMaintenance">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     OCORRÊNCIAS
+                ============================================== -->
+
+                <div class="dashboard-card occurrences-card">
+
+                    <h3>
+
+                        Ocorrências
+
+                        <small>
+                            (últimos 7 dias)
+                        </small>
+
+                    </h3>
+
+
+                    <div class="occurrences-total">
+
+                        <strong id="totalOccurrences">
+                            0
+                        </strong>
+
+                        <span>
+                            Total
+                        </span>
+
+                    </div>
+
+
+                    <div class="occurrence-list">
+
+
+                        <div>
+
+                            <span
+                                class="occurrence-dot safety"
+                            ></span>
+
+                            <span>
+                                Segurança
+                            </span>
+
+                            <strong id="safetyOccurrences">
+                                0
+                            </strong>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <span
+                                class="occurrence-dot health"
+                            ></span>
+
+                            <span>
+                                Saúde
+                            </span>
+
+                            <strong id="healthOccurrences">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SEGUNDA LINHA
+            ================================================== -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- =============================================
+                     CONSUMO DE ENERGIA
+                ============================================== -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <h3>
+                            Consumo de Energia (kWh)
+                        </h3>
+
+                        <select>
+
+                            <option>
+                                kWh
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div
+                        class="bar-chart"
+                        id="energyChart"
+                    >
+
+                        <div class="no-data-message">
+                            Sem dados
+                        </div>
+
+                    </div>
+
+
+                    <div class="bar-labels">
+
+                        <span>Seg</span>
+                        <span>Ter</span>
+                        <span>Qua</span>
+                        <span>Qui</span>
+                        <span>Sex</span>
+                        <span>Sáb</span>
+                        <span>Dom</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     CONSUMO DE ÁGUA
+                ============================================== -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <h3>
+                            Consumo de Água (L)
+                        </h3>
+
+                        <select>
+
+                            <option>
+                                Litros
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div
+                        class="bar-chart water-chart"
+                        id="waterChart"
+                    >
+
+                        <div class="no-data-message">
+                            Sem dados
+                        </div>
+
+                    </div>
+
+
+                    <div class="bar-labels">
+
+                        <span>Seg</span>
+                        <span>Ter</span>
+                        <span>Qua</span>
+                        <span>Qui</span>
+                        <span>Sex</span>
+                        <span>Sáb</span>
+                        <span>Dom</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     SUSTENTABILIDADE
+                ============================================== -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <h3>
+                            Indicadores de Sustentabilidade
+                        </h3>
+
+                    </div>
+
+
+                    <div class="sustainability-list">
+
+
+                        <div class="sustainability-item">
+
+                            <div class="sustainability-icon">
+                                ♻
+                            </div>
+
+                            <span>
+                                Índice de Refugo
+                            </span>
+
+                            <strong id="scrapIndex">
+                                0%
+                            </strong>
+
+                            <b>
+                                -
+                            </b>
+
+                        </div>
+
+
+
+                        <div class="sustainability-item">
+
+                            <div class="sustainability-icon">
+                                ♻
+                            </div>
+
+                            <span>
+                                Emissões de CO₂ (kg)
+                            </span>
+
+                            <strong id="co2Emissions">
+                                0
+                            </strong>
+
+                            <b>
+                                -
+                            </b>
+
+                        </div>
+
+
+
+                        <div class="sustainability-item">
+
+                            <div class="sustainability-icon">
+                                ◉
+                            </div>
+
+                            <span>
+                                Consumo Espec. Energia
+                            </span>
+
+                            <strong id="specificEnergy">
+                                0
+                            </strong>
+
+                            <b>
+                                -
+                            </b>
+
+                        </div>
+
+
+
+                        <div class="sustainability-item">
+
+                            <div class="sustainability-icon">
+                                ♢
+                            </div>
+
+                            <span>
+                                Reaproveitamento de Água
+                            </span>
+
+                            <strong id="waterReuse">
+                                0%
+                            </strong>
+
+                            <b>
+                                -
+                            </b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TERCEIRA LINHA
+            ================================================== -->
+
+            <section class="bottom-grid">
+
+
+                <!-- =============================================
+                     MANUTENÇÃO
+                ============================================== -->
+
+                <div class="dashboard-card maintenance-card">
+
+                    <div class="card-header">
+
+                        <h3>
+                            Máquinas com Manutenção Programada
+                        </h3>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>ID</th>
+
+                                    <th>
+                                        Máquina
+                                    </th>
+
+                                    <th>
+                                        Tipo
+                                    </th>
+
+                                    <th>
+                                        Data
+                                    </th>
+
+                                    <th>
+                                        Técnico Responsável
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="maintenanceTableBody">
+
+                                <tr id="noMaintenanceData">
+
+                                    <td colspan="6">
+
+                                        Nenhuma máquina possui
+                                        manutenção programada.
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     ATALHOS RÁPIDOS
+                ============================================== -->
+
+                <div class="dashboard-card quick-actions">
+
+                    <div class="card-header">
+
+                        <h3>
+                            Atalhos Rápidos
+                        </h3>
+
+                    </div>
+
+
+                    <button
+                        class="quick-action"
+                        id="newMachine"
+                        type="button"
+                    >
+
+                        <span>
+                            ＋
+                        </span>
+
+                        <span>
+                            Nova Máquina
+                        </span>
+
+                        <strong>
+                            ›
+                        </strong>
+
+                    </button>
+
+
+
+                    <button
+                        class="quick-action"
+                        id="newProduction"
+                        type="button"
+                    >
+
+                        <span>
+                            ▣
+                        </span>
+
+                        <span>
+                            Nova Produção
+                        </span>
+
+                        <strong>
+                            ›
+                        </strong>
+
+                    </button>
+
+
+
+                    <button
+                        class="quick-action"
+                        id="newOccurrence"
+                        type="button"
+                    >
+
+                        <span>
+                            ⚠
+                        </span>
+
+                        <span>
+                            Registro de Ocorrência
+                        </span>
+
+                        <strong>
+                            ›
+                        </strong>
+
+                    </button>
+
+
+
+                    <button
+                        class="quick-action"
+                        id="reports"
+                        type="button"
+                    >
+
+                        <span>
+                            ▤
+                        </span>
+
+                        <span>
+                            Relatórios
+                        </span>
+
+                        <strong>
+                            ›
+                        </strong>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
