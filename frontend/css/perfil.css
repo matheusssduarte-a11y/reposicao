@@ -1,0 +1,496 @@
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f4f7f6;
+
+    color: #111;
+
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.profile-container {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar {
+    width: 320px;
+
+    background: #071316;
+
+    color: white;
+
+    padding: 28px 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex-shrink: 0;
+}
+
+
+/* LOGO */
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 45px;
+
+    padding-left: 8px;
+}
+
+.sidebar-logo-icon {
+    width: 54px;
+    height: 54px;
+
+    background: #159447;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+.sidebar-logo h1 {
+    color: #19a653;
+
+    font-size: 23px;
+
+    margin-bottom: 3px;
+}
+
+.sidebar-logo span {
+    color: #ddd;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   MENU
+========================================== */
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 16px;
+
+    border-radius: 10px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    transition: 0.2s;
+}
+
+.menu-item:hover {
+    background: #132124;
+}
+
+.menu-item.active {
+    background: #159947;
+}
+
+.menu-icon {
+    width: 28px;
+
+    text-align: center;
+
+    font-size: 21px;
+}
+
+
+/* ==========================================
+   BOTÃO SAIR
+========================================== */
+
+.logout-button {
+    margin-top: auto;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    text-align: left;
+
+    padding: 18px 16px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.logout-button:hover {
+    color: #19a653;
+}
+
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.main-content {
+    flex: 1;
+
+    padding: 45px;
+
+    min-width: 0;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.page-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.page-header h2 {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #707070;
+
+    font-size: 16px;
+}
+
+
+.back-button {
+    text-decoration: none;
+
+    color: #159947;
+
+    border: 1px solid #159947;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+.back-button:hover {
+    background: #159947;
+
+    color: white;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.profile-card {
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 35px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+
+    max-width: 1000px;
+}
+
+
+/* ==========================================
+   PERFIL SUPERIOR
+========================================== */
+
+.profile-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding-bottom: 30px;
+
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+
+    background: #159947;
+
+    border-radius: 50%;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 36px;
+
+    font-weight: bold;
+}
+
+.profile-top h1 {
+    font-size: 28px;
+
+    margin-bottom: 5px;
+}
+
+.profile-top p {
+    color: #777;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   SEÇÕES
+========================================== */
+
+.form-section {
+    margin-bottom: 35px;
+}
+
+.form-section h3 {
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   FORMULÁRIO
+========================================== */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d9d9d9;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #159947;
+
+    box-shadow: 0 0 0 2px rgba(21, 153, 71, 0.1);
+}
+
+.form-group input:disabled {
+    background: #f1f1f1;
+
+    color: #777;
+}
+
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    border-top: 1px solid #e5e5e5;
+
+    padding-top: 25px;
+}
+
+
+.cancel-button,
+.save-button {
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.cancel-button {
+    background: white;
+
+    border: 1px solid #ccc;
+
+    color: #444;
+}
+
+.cancel-button:hover {
+    background: #f5f5f5;
+}
+
+
+.save-button {
+    background: #159947;
+
+    border: none;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+.save-button:hover {
+    background: #11833b;
+}
+
+
+/* ==========================================
+   RESPONSIVO
+========================================== */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 230px;
+    }
+
+    .main-content {
+        padding: 25px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        width: 75px;
+
+        padding: 20px 8px;
+    }
+
+    .sidebar-logo h1,
+    .sidebar-logo span,
+    .menu-item span:last-child,
+    .logout-button {
+        display: none;
+    }
+
+    .sidebar-logo {
+        justify-content: center;
+    }
+
+    .menu-item {
+        justify-content: center;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .page-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+}
