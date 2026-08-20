@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EcoFactory - Máquinas</title>
+
+    <link
+        rel="stylesheet"
+        href="/frontend/css/maquinas.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- ==========================================
+             BARRA LATERAL
+        =========================================== -->
+
+        <aside class="sidebar">
+
+            <!-- Logo -->
+
+            <div class="sidebar-logo">
+
+                <div class="sidebar-logo-icon">
+                    ⚙
+                </div>
+
+                <div>
+
+                    <h1>EcoFactory</h1>
+
+                    <span>
+                        Indústria Inteligente
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Menu -->
+
+            <nav class="sidebar-menu">
+
+                <a
+                    href="dashboard.html"
+                    class="menu-item"
+                >
+                    <span class="menu-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+
+                <a
+                    href="maquinas.html"
+                    class="menu-item active"
+                >
+                    <span class="menu-icon">⚙</span>
+                    <span>Máquinas</span>
+                </a>
+
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">▥</span>
+                    <span>Produção</span>
+                </a>
+
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">♢</span>
+                    <span>Consumos</span>
+                </a>
+
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">⚠</span>
+                    <span>Ocorrências</span>
+                </a>
+
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">⌁</span>
+                    <span>Indicadores</span>
+                </a>
+
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">▤</span>
+                    <span>Relatórios</span>
+                </a>
+
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">♙</span>
+                    <span>Usuários</span>
+                </a>
+
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">⚙</span>
+                    <span>Configurações</span>
+                </a>
+
+            </nav>
+
+
+            <!-- Sair -->
+
+            <button
+                class="logout-button"
+                id="logoutButton"
+            >
+
+                <span>⇥</span>
+
+                Sair
+
+            </button>
+
+        </aside>
+
+
+        <!-- ==========================================
+             CONTEÚDO
+        =========================================== -->
+
+        <main class="main-content">
+
+
+            <!-- ======================================
+                 CABEÇALHO
+            ======================================= -->
+
+            <header class="top-header">
+
+                <div class="header-title">
+
+                    <h2>
+                        Máquinas
+                    </h2>
+
+                    <p>
+                        Gerencie as máquinas utilizadas
+                        na produção
+                    </p>
+
+                </div>
+
+
+                <div class="header-actions">
+
+                    <button
+                        class="notification-button"
+                        id="notificationButton"
+                    >
+
+                        ♧
+
+                        <span class="notification-badge">
+                            3
+                        </span>
+
+                    </button>
+
+
+                    <div class="user-profile">
+
+                        <div
+                            class="user-avatar"
+                            id="userAvatar"
+                        >
+                            U
+                        </div>
+
+                        <span id="userName">
+                            Usuário
+                        </span>
+
+                        <span class="arrow">
+                            ⌄
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ======================================
+                 RESUMO
+            ======================================= -->
+
+            <section class="machine-summary">
+
+                <div class="summary-card">
+
+                    <div>
+
+                        <span>
+                            Total de máquinas
+                        </span>
+
+                        <strong id="totalMachines">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="summary-icon">
+                        ⚙
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div>
+
+                        <span>
+                            Máquinas ativas
+                        </span>
+
+                        <strong id="activeMachines">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="summary-icon active-icon">
+                        ✓
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div>
+
+                        <span>
+                            Em manutenção
+                        </span>
+
+                        <strong id="maintenanceMachines">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="summary-icon maintenance-icon">
+                        ⚠
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div>
+
+                        <span>
+                            Paradas
+                        </span>
+
+                        <strong id="stoppedMachines">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="summary-icon stopped-icon">
+                        ■
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ======================================
+                 FORMULÁRIO
+            ======================================= -->
+
+            <section class="content-card">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <h3>
+                            Cadastrar máquina
+                        </h3>
+
+                        <p>
+                            Registre uma nova máquina
+                            utilizada na produção.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="machineForm">
+
+                    <div class="form-grid">
+
+
+                        <!-- ID -->
+
+                        <div class="form-group">
+
+                            <label for="machineId">
+                                ID da máquina
+                            </label>
+
+                            <input
+                                type="text"
+                                id="machineId"
+                                placeholder="Ex: M-001"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Nome -->
+
+                        <div class="form-group">
+
+                            <label for="machineName">
+                                Nome da máquina
+                            </label>
+
+                            <input
+                                type="text"
+                                id="machineName"
+                                placeholder="Ex: Torno CNC"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Tipo -->
+
+                        <div class="form-group">
+
+                            <label for="machineType">
+                                Tipo
+                            </label>
+
+                            <select
+                                id="machineType"
+                                required
+                            >
+
+                                <option value="">
+                                    Selecione o tipo
+                                </option>
+
+                                <option value="CNC">
+                                    CNC
+                                </option>
+
+                                <option value="Injetora">
+                                    Injetora
+                                </option>
+
+                                <option value="Compressor">
+                                    Compressor
+                                </option>
+
+                                <option value="Prensa">
+                                    Prensa
+                                </option>
+
+                                <option value="Esteira">
+                                    Esteira
+                                </option>
+
+                                <option value="Robô Industrial">
+                                    Robô Industrial
+                                </option>
+
+                                <option value="Outro">
+                                    Outro
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Localização -->
+
+                        <div class="form-group">
+
+                            <label for="machineLocation">
+                                Localização
+                            </label>
+
+                            <input
+                                type="text"
+                                id="machineLocation"
+                                placeholder="Ex: Setor A"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Status -->
+
+                        <div class="form-group">
+
+                            <label for="machineStatus">
+                                Status
+                            </label>
+
+                            <select
+                                id="machineStatus"
+                                required
+                            >
+
+                                <option value="">
+                                    Selecione o status
+                                </option>
+
+                                <option value="Ativa">
+                                    Ativa
+                                </option>
+
+                                <option value="Parada">
+                                    Parada
+                                </option>
+
+                                <option value="Manutenção">
+                                    Manutenção
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Data -->
+
+                        <div class="form-group">
+
+                            <label for="installationDate">
+                                Data de instalação
+                            </label>
+
+                            <input
+                                type="date"
+                                id="installationDate"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-buttons">
+
+                        <button
+                            type="button"
+                            class="cancel-button"
+                            id="cancelEdit"
+                        >
+                            Cancelar
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="save-button"
+                            id="saveMachine"
+                        >
+                            + Cadastrar máquina
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- ======================================
+                 LISTAGEM
+            ======================================= -->
+
+            <section class="content-card">
+
+                <div class="section-title list-header">
+
+                    <div>
+
+                        <h3>
+                            Máquinas cadastradas
+                        </h3>
+
+                        <p>
+                            Visualize e gerencie suas máquinas.
+                        </p>
+
+                    </div>
+
+
+                    <input
+                        type="text"
+                        id="searchMachine"
+                        class="search-input"
+                        placeholder="🔎 Buscar máquina..."
+                    >
+
+                </div>
+
+
+                <!-- Mensagem quando não há máquinas -->
+
+                <div
+                    id="emptyMessage"
+                    class="empty-message"
+                >
+
+                    <div class="empty-icon">
+                        ⚙
+                    </div>
+
+                    <h3>
+                        Nenhuma máquina cadastrada
+                    </h3>
+
+                    <p>
+                        Comece cadastrando a primeira
+                        máquina da sua indústria.
+                    </p>
+
+                </div>
+
+
+                <!-- Lista -->
+
+                <div
+                    id="machineList"
+                    class="machine-list"
+                >
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="/frontend/js/maquinas.js"></script>
+
+</body>
+
+</html>
