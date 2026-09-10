@@ -222,9 +222,13 @@ ecofactory
 Na pasta backend, crie/configure o arquivo .env:
 
 DB_HOST=localhost
+
 DB_PORT=5432
+
 DB_NAME=ecofactory
+
 DB_USER=postgres
+
 DB_PASSWORD=SUA_SENHA
 
 Importante: substitua SUA_SENHA pela senha do seu PostgreSQL e
