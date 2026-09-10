@@ -1,110 +1,211 @@
-# 🌿 EcoFactory - Sistema de Gestão e Monitoramento Industrial Inteligente
+# 🌿EcoFactory -- Indústria Inteligente
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
-[![React Version](https://img.shields.io/badge/react-18.x-blue.svg)](https://reactjs.org/)
-[![PostgreSQL](https://img.shields.io/badge/database-PostgreSQL-blueviolet.svg)](https://www.postgresql.org/)
+##  📌 Sobre o projeto
 
-> **Projeto de Reposição SENAI** — 12/08/2026  
-> **Autor:** Matheus Sosnoski Santos Duarte  
-> **Instituição:** SENAI  
+A EcoFactory é uma empresa fictícia do setor industrial. O projeto
+consiste no desenvolvimento de uma aplicação web Full Stack voltada ao
+monitoramento e à gestão de processos de uma indústria inteligente.
 
----
+A aplicação busca centralizar informações importantes da empresa,
+facilitando o acompanhamento das máquinas, a visualização de indicadores
+e a tomada de decisões.
 
-## 📌 Sumário
-- [Sobre o Projeto](#-sobre-o-projeto)
-- [Contexto e Situação Problema](#-contexto-e-situação-problema)
-- [Público-Alvo](#-público-alvo)
-- [Funcionalidades Principais](#-funcionalidades-principais)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Arquitetura do Sistema](#-arquitetura-do-sistema)
-- [Modelo de Dados (PostgreSQL)](#-modelo-de-dados-postgresql)
-- [Pré-requisitos](#-pré-requisitos)
-- [Instalação e Execução](#-instalação-e-execução)
+## 🚨 Situação-problema
 
----
+A empresa fictícia EcoFactory ainda registra informações importantes
+em planilhas e documentos separados. Essa forma de trabalho dificulta o
+acompanhamento da produção, o controle das máquinas, a análise de
+indicadores e a tomada de decisão.
 
-## 📄 Sobre o Projeto
+As principais informações envolvidas são:
 
-O **EcoFactory** é uma aplicação web **Full Stack** voltada para o monitoramento e a gestão eficiente de processos em uma indústria inteligente (Indústria 4.0). O projeto consolida a gestão de maquinários, registros de produção industrial, consumo de recursos sustentáveis (água e energia) e ocorrências de Saúde e Segurança do Trabalho (SST) em uma plataforma centralizada e de fácil acesso.
+Máquinas utilizadas na produção;
 
----
+Quantidade de produtos fabricados;
 
-## 🎯 Contexto e Situação Problema
+Consumo de energia e água;
 
-A empresa fictícia **EcoFactory** opera no setor industrial e ainda registra suas informações críticas em planilhas descentralizadas e documentos avulsos. Esse fluxo manual gera gargalos como:
-* Dificuldade no acompanhamento da produção em tempo real;
-* Falta de previsibilidade e controle sobre o estado das máquinas;
-* Ausência de consolidação dos indicadores de consumo de água e energia;
-* Lentidão na identificação de ocorrências de saúde e segurança;
-* Comprometimento da tomada de decisão estratégica e sustentável.
+Situação de funcionamento dos equipamentos;
 
-**Objetivo:** Desenvolver de forma colaborativa uma solução web moderna com interface responsiva, API REST, persistência em banco de dados relacional, suíte de testes e documentação técnica completa.
+Ocorrências relacionadas à saúde e segurança;
 
----
+Indicadores de produtividade e sustentabilidade.
 
-## 👥 Público-Alvo
+## 🎯 Objetivo
 
-* **Clientes e Parceiros da EcoFactory:** Para acompanhamento do compromisso sustentável e relatórios de eficiência.
-* **Gestores e Operadores Industriais:** Para monitoramento diário, controle operacional das máquinas e análise dos indicadores de produtividade e SST.
+Desenvolver, de forma colaborativa, uma aplicação web Full Stack
+para o monitoramento e a gestão de processos de uma indústria
+inteligente, integrando interface responsiva, API REST, banco de dados,
+versionamento, testes e documentação técnica.
 
----
+## 👥 Público
 
-## ✨ Funcionalidades Principais
+Clientes da empresa fictícia EcoFactory.
 
-- [x] **CRUD Completo de Máquinas:** Cadastro, listagem, atualização de status de funcionamento (Ativa, Em Manutenção, Inativa) e remoção.
-- [x] **Dashboard de Indicadores:** Visualização gráfica intuitiva com KPIs de produtividade, status dos equipamentos e metas de sustentabilidade.
-- [x] **Validação do Front-End:** Validação rigorosa em todos os formulários antes do envio para a API REST.
-- [x] **Persistência Confiável:** Armazenamento seguro e estruturado em PostgreSQL.
+## ⚙️ Funcionalidades
 
----
+CRUD completo de máquinas;
 
-## 🛠️ Tecnologias Utilizadas
+Cadastro e consulta de produção;
 
-### **Front-End**
-* **Library:** React (v18+)
-* **Build Tool:** Vite
-* **Linguagem:** JavaScript (ES6+)
-* **Requisições HTTP:** Axios / Fetch API
+Dashboard com indicadores básicos;
 
-### **Back-End**
-* **Runtime:** Node.js
-* **Framework Web:** Express.js
-* **Driver / DB:** `pg` (node-postgres) ou Prisma / Sequelize
+Persistência de dados no PostgreSQL;
 
-### **Banco de Dados**
-* **SGBD:** PostgreSQL (Local, Neon.tech ou Supabase)
+Integração do Front-End com a API REST;
 
-### **Testes**
-* **Front-End:** Vitest + React Testing Library
-* **Back-End:** Jest + Supertest
+Validação dos principais formulários;
 
-### **Ferramentas de Suporte & Versionamento**
-* **Versionamento:** Git & GitHub
-* **Prototipação:** Figma / Canva
-* 
- **IMAGEM PROTÓTIPO**
-*<img width="1536" height="1024" alt="ChatGPT Image 13 de ago  de 2026, 14_43_41" src="https://github.com/user-attachments/assets/2a871fe9-571e-472c-83c4-ab26be446f2f" />
+README com instruções de execução do projeto.
 
+Funcionalidades atualmente implementadas
 
+Cadastro de usuários;
 
-### **▶️ Instalação e execução**
+Login;
 
-**Pré-requisitos**
+Dashboard inicial;
 
-**Node.js;**
+Cadastro de máquinas;
 
-**PostgreSQL;**
+Consulta/listagem de máquinas;
 
-**Git;**
+Edição de máquinas;
 
-**Navegador web;**
+Exclusão de máquinas;
 
-**Visual Studio Code (recomendado).**
+Persistência das máquinas no PostgreSQL;
 
-## 1. Instalar as dependências
+Integração entre Front-End, API REST e banco de dados.
 
-#Abra o terminal dentro da pasta backend e execute:##
+## 🛠️ Tecnologias
+
+Front-End
+
+HTML
+
+CSS
+
+JavaScript
+
+React
+
+Vite
+
+Fetch API ou Axios
+
+Back-End
+
+Node.js
+
+Express
+
+Banco de Dados
+
+PostgreSQL local, Neon ou Supabase
+
+Versionamento
+
+Git
+
+GitHub
+
+Testes
+
+Vitest
+
+React Testing Library
+
+Jest
+
+Supertest
+
+Prototipação
+
+Figma
+
+Canva
+
+Ferramenta equivalente
+
+## 📁 Estrutura do projeto
+
+EcoFactorySite/
+├── backend/
+│   ├── routes/
+│   │   ├── usuarios.js
+│   │   └── maquinas.js
+│   ├── src/
+│   │   ├── database.js
+│   │   └── server.js
+│   ├── .env
+│   ├── package.json
+│   └── package-lock.json
+├── frontend/
+│   ├── css/
+│   ├── html/
+│   └── js/
+└── README.md
+
+## 🗄️ Banco de dados
+
+O projeto utiliza o PostgreSQL para armazenar os dados da aplicação.
+
+As principais tabelas utilizadas atualmente são:
+
+usuarios
+
+maquinas
+
+A tabela usuarios armazena os dados dos usuários cadastrados.
+
+A tabela maquinas armazena as informações das máquinas e permite
+realizar as operações de criação, consulta, atualização e exclusão.
+
+🔌 API REST
+
+O Back-End utiliza Node.js + Express para disponibilizar uma API
+REST.
+
+Usuários
+
+POST /api/usuarios
+
+Cadastra um novo usuário.
+
+Login
+
+POST /api/login
+
+Realiza a autenticação do usuário.
+
+Máquinas
+
+GET /api/maquinas
+POST /api/maquinas
+PUT /api/maquinas/:id
+DELETE /api/maquinas/:id
+
+Esses endpoints permitem consultar, cadastrar, atualizar e excluir
+máquinas.
+
+## ▶️ Como executar o projeto
+
+Pré-requisitos
+
+Node.js;
+
+PostgreSQL;
+
+Git;
+
+Navegador web;
+
+Visual Studio Code (recomendado).
+
+1. Instalar as dependências
+
+Abra o terminal dentro da pasta backend e execute:
 
 npm install
 
@@ -124,9 +225,12 @@ DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=ecofactory
 DB_USER=postgres
-DB_PASSWORD=sua senha
----
-## 3. Iniciar o Back-End 
+DB_PASSWORD=SUA_SENHA
+
+Importante: substitua SUA_SENHA pela senha do seu PostgreSQL e
+não compartilhe o arquivo .env publicamente.
+
+3. Iniciar o Back-End
 
 Dentro da pasta backend:
 
@@ -140,7 +244,7 @@ Para testar a conexão com o banco:
 
 http://localhost:3000/api/teste-banco
 
-##  4. Executar o Front-End##
+4. Executar o Front-End
 
 Utilize o Live Server do Visual Studio Code e abra:
 
@@ -148,30 +252,63 @@ frontend/html/index.html
 
 O sistema será aberto no navegador.
 
+🔐 Fluxo de utilização
 
-## 🏗️ Arquitetura do Sistema
+Cadastro
+   ↓
+Login
+   ↓
+Dashboard
+   ↓
+Máquinas
+   ↓
+Cadastrar / Consultar / Editar / Excluir
 
-```text
-ecofactory/
-├── backend/
-│   ├── src/
-│   │   ├── controllers/      # Lógica de controle das rotas
-│   │   ├── models/           # Consultas e tabelas do banco de dados
-│   │   ├── routes/           # Definição dos endpoints REST
-│   │   ├── middlewares/      # Validações e tratamento de erros
-│   │   └── database/         # Configuração da conexão PostgreSQL
-│   ├── tests/                # Testes automatizados (Jest / Supertest)
-│   ├── .env.example          # Exemplo de variáveis de ambiente
-│   ├── package.json
-│   └── server.js             # Ponto de entrada da aplicação
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/       # Componentes reutilizáveis
-│   │   ├── pages/            # Páginas (Dashboard, Máquinas, Produção, SST)
-│   │   ├── services/         # Configuração da API REST (Axios/Fetch)
-│   │   └── styles/           # Arquivos de estilização global
-│   ├── src/__tests__/        # Testes de componentes (Vitest / RTL)
-│   ├── package.json
-│   └── vite.config.js
-└── README.md# reposicao
+## 💾 Persistência dos dados
+
+Os dados das máquinas são armazenados no PostgreSQL por meio da API
+REST. Dessa forma, os registros permanecem disponíveis após a
+atualização da página.
+
+## 🔄 Versionamento
+
+O projeto utiliza Git para controle de versão e GitHub para
+armazenamento e colaboração no código-fonte.
+
+## 🧪 Testes
+
+O projeto prevê a utilização de:
+
+Vitest;
+
+React Testing Library;
+
+Jest;
+
+Supertest.
+
+Essas ferramentas podem ser utilizadas para testar componentes do
+Front-End e endpoints da API.
+
+## 🎨 Prototipação
+
+A interface pode ser planejada e prototipada utilizando:
+
+Figma;
+
+Canva;
+
+Ferramenta equivalente.
+
+##🌱 EcoFactory
+
+A proposta da EcoFactory é utilizar tecnologia para facilitar o
+monitoramento dos processos industriais, contribuindo para uma gestão
+mais organizada das informações e para o acompanhamento de aspectos
+relacionados à produtividade e sustentabilidade.
+
+## 👨‍💻 Projeto acadêmico
+
+Projeto desenvolvido para fins acadêmicos, com foco no desenvolvimento
+colaborativo de uma aplicação web Full Stack utilizando tecnologias de
+Front-End, Back-End, banco de dados e versionamento.
