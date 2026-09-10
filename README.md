@@ -300,7 +300,7 @@ Canva;
 
 Ferramenta equivalente.
 
-##🌱 EcoFactory
+## 🌱 EcoFactory
 
 A proposta da EcoFactory é utilizar tecnologia para facilitar o
 monitoramento dos processos industriais, contribuindo para uma gestão
