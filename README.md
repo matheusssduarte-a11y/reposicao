@@ -312,3 +312,8 @@ relacionados à produtividade e sustentabilidade.
 Projeto desenvolvido para fins acadêmicos, com foco no desenvolvimento
 colaborativo de uma aplicação web Full Stack utilizando tecnologias de
 Front-End, Back-End, banco de dados e versionamento.
+
+## Imagem protótipo
+
+<img width="1536" height="1024" alt="ChatGPT Image 10 de set  de 2026, 15_53_10" src="https://github.com/user-attachments/assets/481e772e-b810-44f6-83a9-0fcbbdb0394a" />
+
