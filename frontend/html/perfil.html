@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EcoFactory - Meu Perfil</title>
+
+    <link
+        rel="stylesheet"
+        href="/frontend/css/perfil.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="profile-container">
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <div class="sidebar-logo-icon">
+                    ⚙
+                </div>
+
+                <div>
+
+                    <h1>EcoFactory</h1>
+
+                    <span>
+                        Indústria Inteligente
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a href="dashboard.html" class="menu-item">
+                    <span class="menu-icon">⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="maquinas.html" class="menu-item">
+                    <span class="menu-icon">⚙</span>
+                    Máquinas
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">▥</span>
+                    Produção
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">♢</span>
+                    Consumos
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">⚠</span>
+                    Ocorrências
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">⌁</span>
+                    Indicadores
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">▤</span>
+                    Relatórios
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">♙</span>
+                    Usuários
+                </a>
+
+                <a href="#" class="menu-item active">
+                    <span class="menu-icon">⚙</span>
+                    Meu Perfil
+                </a>
+
+            </nav>
+
+
+            <button
+                class="logout-button"
+                id="logoutButton"
+            >
+                <span>⇥</span>
+                Sair
+            </button>
+
+        </aside>
+
+
+        <!-- ==========================================
+             CONTEÚDO
+        =========================================== -->
+
+        <main class="main-content">
+
+            <header class="page-header">
+
+                <div>
+
+                    <h2>
+                        Meu Perfil
+                    </h2>
+
+                    <p>
+                        Visualize e personalize suas informações
+                    </p>
+
+                </div>
+
+                <a
+                    href="dashboard.html"
+                    class="back-button"
+                >
+                    ← Voltar ao Dashboard
+                </a>
+
+            </header>
+
+
+            <!-- ==========================================
+                 PERFIL
+            =========================================== -->
+
+            <section class="profile-card">
+
+                <div class="profile-top">
+
+                    <div
+                        class="profile-avatar"
+                        id="profileAvatar"
+                    >
+                        U
+                    </div>
+
+                    <div>
+
+                        <h1 id="profileName">
+                            Usuário
+                        </h1>
+
+                        <p id="profileUsername">
+                            @usuario
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ======================================
+                     FORMULÁRIO
+                ======================================= -->
+
+                <form id="profileForm">
+
+                    <div class="form-section">
+
+                        <h3>
+                            Informações pessoais
+                        </h3>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Nome completo
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="Digite seu nome"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="username">
+                                    Nome de usuário
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="username"
+                                    placeholder="Digite seu usuário"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    E-mail
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="Digite seu e-mail"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Telefone
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    placeholder="Digite seu telefone"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==================================
+                         DADOS DA CONTA
+                    =================================== -->
+
+                    <div class="form-section">
+
+                        <h3>
+                            Dados da conta
+                        </h3>
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="password">
+                                    Senha
+                                </label>
+
+                                <input
+                                    type="password"
+                                    id="password"
+                                    placeholder="Senha"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Tipo de usuário
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="Cliente"
+                                    disabled
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==================================
+                         BOTÕES
+                    =================================== -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            class="cancel-button"
+                            id="cancelButton"
+                        >
+                            Cancelar
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="save-button"
+                        >
+                            Salvar alterações
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="/frontend/js/perfil.js"></script>
+
+</body>
+
+</html>
