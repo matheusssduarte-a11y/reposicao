@@ -203,7 +203,7 @@ Navegador web;
 
 Visual Studio Code (recomendado).
 
-1. Instalar as dependências
+**1. Instalar as dependências**
 
 Abra o terminal dentro da pasta backend e execute:
 
@@ -213,7 +213,7 @@ Caso necessário:
 
 npm install express cors pg dotenv
 
-2. Configurar o banco de dados
+**2. Configurar o banco de dados**
 
 Crie um banco PostgreSQL chamado:
 
@@ -230,7 +230,7 @@ DB_PASSWORD=SUA_SENHA
 Importante: substitua SUA_SENHA pela senha do seu PostgreSQL e
 não compartilhe o arquivo .env publicamente.
 
-3. Iniciar o Back-End
+**3. Iniciar o Back-End**
 
 Dentro da pasta backend:
 
@@ -244,7 +244,7 @@ Para testar a conexão com o banco:
 
 http://localhost:3000/api/teste-banco
 
-4. Executar o Front-End
+**4. Executar o Front-End**
 
 Utilize o Live Server do Visual Studio Code e abra:
 
