@@ -21,13 +21,6 @@
 - [Modelo de Dados (PostgreSQL)](#-modelo-de-dados-postgresql)
 - [Pré-requisitos](#-pré-requisitos)
 - [Instalação e Execução](#-instalação-e-execução)
-  - [1. Clonar o Repositório](#1-clonar-o-repositório)
-  - [2. Configurar o Banco de Dados](#2-configurar-o-banco-de-dados)
-  - [3. Configurar e Rodar o Back-End](#3-configurar-e-rodar-o-back-end)
-  - [4. Configurar e Rodar o Front-End](#4-configurar-e-rodar-o-front-end)
-- [Executando os Testes](#-executando-os-testes)
-- [Prototipação e Design](#-prototipação-e-design)
-- [Licença](#-licença)
 
 ---
 
