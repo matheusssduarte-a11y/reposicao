@@ -93,7 +93,68 @@ A empresa fictícia **EcoFactory** opera no setor industrial e ainda registra su
  **IMAGEM PROTÓTIPO**
 *<img width="1536" height="1024" alt="ChatGPT Image 13 de ago  de 2026, 14_43_41" src="https://github.com/user-attachments/assets/2a871fe9-571e-472c-83c4-ab26be446f2f" />
 
+
+
+### **▶️ Instalação e execução**
+
+**Pré-requisitos**
+
+**Node.js;**
+
+**PostgreSQL;**
+
+**Git;**
+
+**Navegador web;**
+
+**Visual Studio Code (recomendado).**
+
+## 1. Instalar as dependências##
+
+#Abra o terminal dentro da pasta backend e execute:##
+
+npm install
+
+Caso necessário:
+
+npm install express cors pg dotenv
+
+2. Configurar o banco de dados
+
+Crie um banco PostgreSQL chamado:
+
+ecofactory
+
+Na pasta backend, crie/configure o arquivo .env:
+
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=ecofactory
+DB_USER=postgres
+DB_PASSWORD=sua senha
 ---
+## 3. Iniciar o Back-End ##
+
+Dentro da pasta backend:
+
+npm start
+
+O servidor deverá ficar disponível em:
+
+http://localhost:3000
+
+Para testar a conexão com o banco:
+
+http://localhost:3000/api/teste-banco
+
+##  4. Executar o Front-End##
+
+Utilize o Live Server do Visual Studio Code e abra:
+
+frontend/html/index.html
+
+O sistema será aberto no navegador.
+
 
 ## 🏗️ Arquitetura do Sistema
 
