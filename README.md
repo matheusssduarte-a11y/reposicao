@@ -109,7 +109,7 @@ A empresa fictícia **EcoFactory** opera no setor industrial e ainda registra su
 
 **Visual Studio Code (recomendado).**
 
-## 1. Instalar as dependências##
+## 1. Instalar as dependências
 
 #Abra o terminal dentro da pasta backend e execute:##
 
@@ -133,7 +133,7 @@ DB_NAME=ecofactory
 DB_USER=postgres
 DB_PASSWORD=sua senha
 ---
-## 3. Iniciar o Back-End ##
+## 3. Iniciar o Back-End 
 
 Dentro da pasta backend:
 
