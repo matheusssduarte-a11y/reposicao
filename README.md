@@ -60,9 +60,6 @@ A empresa fictícia **EcoFactory** opera no setor industrial e ainda registra su
 ## ✨ Funcionalidades Principais
 
 - [x] **CRUD Completo de Máquinas:** Cadastro, listagem, atualização de status de funcionamento (Ativa, Em Manutenção, Inativa) e remoção.
-- [x] **Registro e Consulta de Produção:** Lançamento diário de lotes produzidos e histórico filtrável por período/equipamento.
-- [x] **Gestão de Sustentabilidade & Recursos:** Registro e cálculo do consumo de energia (kWh) e água (L).
-- [x] **Controle de Ocorrências (SST):** Registro de incidentes e eventos de saúde e segurança operacional.
 - [x] **Dashboard de Indicadores:** Visualização gráfica intuitiva com KPIs de produtividade, status dos equipamentos e metas de sustentabilidade.
 - [x] **Validação do Front-End:** Validação rigorosa em todos os formulários antes do envio para a API REST.
 - [x] **Persistência Confiável:** Armazenamento seguro e estruturado em PostgreSQL.
