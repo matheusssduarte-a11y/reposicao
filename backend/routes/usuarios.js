@@ -3,7 +3,6 @@ const router = express.Router();
 
 const pool = require("../src/database");
 
-
 // ==========================================
 // CADASTRAR USUÁRIO
 // ==========================================
@@ -83,8 +82,7 @@ router.post("/", async (req, res) => {
                 (
                     nome,
                     email,
-                    senha,
-                   
+                    senha
                 )
                 VALUES
                 ($1, $2, $3)
@@ -99,8 +97,7 @@ router.post("/", async (req, res) => {
                 [
                     nome,
                     email,
-                    senha,
-                    null
+                    senha
                 ]
             );
 
